@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Best Blog Ever</title>
+
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/css.css') }}">
+
+    </head>
+<body>
+    <Nav>
+        <a href="/blog">Main Blog Page</a>
+        <a href="/newpost">Add New Blog Page</a>
+    </Nav>
+
+    {% block content %}
+    {% endblock %}
+
+</body>
+</html>

@@ -4,12 +4,100 @@ body{
     padding: 20px;
     border:5px solid black;
     text-align: center;
-
+    text-decoration: none;
+    color: blue;
 }
+
+h1{
+    font-size: 400%;
+    color: blue;
+    background-color: black;
+    margin-top: 0;
+    padding-top: 0;
+    position: relative;
+    top: -20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding-bottom: 20px;
+    height: 100px;
+}
+
 Nav{
+    margin: auto;
+    padding: 20px;
+    font-size: 200%;
     text-align: left;
+    color: blue;
+    background-color: black;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    margin-bottom: 0;
+}
+
+Nav a {
+    color: blue;
+    text-decoration: none;
+    background-color: cyan;
+    padding: 20px;
+    display: inline-block;
+    height: 50%;
+    border-radius: 20px;
+}
+
+a{
+  color: blue;
+  text-decoration: none;  
+  
+}
+
+#entry{
+    font-size: 2em;
+    color: black;
+    background: cyan;
+    border: 15px;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+form{
+    font-size: 2em;
+    text-align: left;
+}
+
+label[for="entry"]{
+    position: relative;
+    left: 108px;
+   
+}
+input[type="text"]{
+    background: cyan;
+}
+
+input{
+    height: 25%;
+    width: 25%;
+    
     
 }
-form {
-    align-content: center;
+
+input[type="submit"]{
+    position: relative;
+    left: 400px;
+    
+}
+input:focus{
+    background: yellow;
+}
+textarea{
+    height: 50%;
+    width: 50%;
+    background: cyan;
+}
+textarea:focus{
+    background: yellow;
+}
+
+#entryerror{
+    position: relative;
+    left: 105px;
 }

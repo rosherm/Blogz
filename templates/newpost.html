@@ -10,7 +10,7 @@
 <form method='post'>
     <label>
         Title for your new blog:
-        <input type="text" name='title' value = "{{title_name}}" />
+        <input focus type="text" name='title' value = "{{title_name}}" />
         
     </label>
     <span class = "error">{{title_error}}</span>
@@ -18,9 +18,9 @@
     <label for="entry">
         Your new blog:
         
-        <textarea cols="30" rows="10" type="text" name='entry' value = "{{entry}}" ></textarea>
+        <textarea focus cols="30" rows="10" type="text" name='entry' value = "{{entry}}" ></textarea>
     </label>
-    <span class = "error">{{entry_error}}</span>
+    <span id = "entryerror" class = "error">{{entry_error}}</span>
     <br>
     <input type="submit" value='Add Entry' />
 </form>

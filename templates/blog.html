@@ -8,11 +8,12 @@
     <p>No Blogs Posted Yet!</p>
     {% else %}
 
-            <p>{{timestamp}}</p>
+           
             {% for blogentry in AllBlogs %}
                 <div id="entry">
                 <a href="/blog?id={{blogentry.id}}"> <h2>{{blogentry.title}}</h2></a>
                 <p class = "bodytext">{{blogentry.body}}</p>
+                <a href="/blog?user={{blogentry.owner.username}}"> <p>{{blogentry.owner.username}}</h2></p>
                 </div>
               <hr />
             {% endfor %}

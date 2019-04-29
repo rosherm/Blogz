@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <h1>{{username}}</h1>
+
+    {% for blogentry in AllBlogs %}
+    <div id="entry">
+    <a href="/blog?id={{blogentry.id}}"> <h2>{{blogentry.title}}</h2></a>
+    <p class = "bodytext">{{blogentry.body}}</p>
+    </div>
+    <hr />
+    {% endfor %}
+
+{% endblock %}

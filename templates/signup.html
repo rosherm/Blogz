@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Register to Get It Done!</h1>
+<form action="/signup" method="post">
+    <table>
+        <tr>
+            <td><label for="username">Username</label></td>
+            <td>
+                <input name="username" type="text" value="{{ username }}">
+
+                <span class="error">{{error}}</span>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="password">Password</label></td>
+            <td>
+                <input name="password" type="password">
+
+                <span class="error1">{{error1}}</span>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="verify">Verify Password</label></td>
+            <td>
+                <input name="verify" type="password">
+
+                <span class="error2">{{error2}}</span>
+            </td>
+        </tr>
+    </table>
+    <input type="submit" value="Signup">
+
+    <span class="error3">{{error3}}</span>
+</form>
+{% endblock %}

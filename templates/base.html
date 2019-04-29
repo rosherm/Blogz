@@ -3,19 +3,38 @@
     <head>
         <title>Best Blog Ever</title>
 
+        <style>
+            .error {
+                color:red;
+            }
+        </style>
+
         <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/css.css') }}">
 
     </head>
 <body>
     <Nav>
-        <a href="/blog">Main Blog Page</a>
+        <a href="/">Home</a>
+        <a href="/blog">All Posts</a>
         <a href="/newpost">Add New Blog Page</a>
+        <a href="/login">Login</a>
+        <a href="/logout">Logout</a>
     </Nav>
 
     {% block content %}
     {% endblock %}
-    <footer>
-        Created by Ross Sherman
-    </footer>
+    
+    {% with messages = get_flashed_messages(with_categories=True) %}
+    <ul>
+
+    {% for category,message in messages %}
+
+        <li class = "{{category}}">{{message}}</li>
+
+    {% endfor %}
+
+    </ul>
+    {% endwith %}
+
 </body>
 </html>
